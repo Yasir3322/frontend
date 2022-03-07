@@ -1,0 +1,30 @@
+@import "./partials/colors";
+@mixin parastyle($color , $size) {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: $color;
+    font-weight: bold;
+}
+div#demo {
+    margin: 7rem;
+    width: 100%;
+    height: 35%;
+    p.intro{
+        color: $secondary;
+    }
+}
+
+div#test{
+   P{
+       @include parastyle(red, 0.2rem )
+   }
+}
+.simple-btn {
+    color: red;
+    border: 1px solid black;
+    background-color: blue;
+
+}
+.fancy-btn{
+    @extend .simple-btn;
+    color: white;
+}
